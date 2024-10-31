@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #DCA47C;
+    color: #FCF8F3;
+}
+nav {
+    margin-bottom: 20px;
+}
+nav a {
+    color: #FCF8F3;
+    margin: 0 10px;
+    text-decoration: none;
+}
+/* Style untuk etalase */
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px);
+    transition: filter 0.3s ease;
+}
+
+.product-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product:hover img {
+    filter: blur(0);
+}
+
+.product:hover .product-info {
+    opacity: 1;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.etalase {
+    background-image: #698474; /* Latar belakang untuk produk */
+    padding: 20px; /* Menambahkan padding untuk ruang di dalam produk */
+    margin: 10px; /* Menambahkan jarak antara produk */
+    border-radius: 8px; /* Menambahkan sudut melengkung pada produk */
+    width: 30%; /* Mengatur lebar produk */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek kedalaman */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+}
+
+.etalase img {
+    max-width: 150px; /* Mengatur lebar maksimum gambar */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada gambar */
+    margin-right: 20px; /* Menambahkan jarak antara gambar dan info */
+}
+.etalase-info {
+    display: flex; /* Menggunakan Flexbox untuk info produk */
+    flex-direction: column; /* Mengatur info produk dalam kolom */
+    justify-content: center; /* Menyelaraskan informasi produk secara vertikal */
+}
+/* Kontainer Etalase */
+.etalase-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Gaya Produk */
+.etalase {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-radius: 10px;
+    transition: flex-grow 0.3s ease, transform 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Efek Hover dengan Flex-grow */
+.etalase:hover {
+    flex-grow: 2;
+    transform: scale(1.05); /* Opsional untuk sedikit memperbesar */
+}
+
+/* Promo Container di halaman Home */
+.promo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.promo-box {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Transparan awal */
+    border-radius: 15px;
+    color: #333;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(0px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Efek Glassmorphism saat Hover */
+.promo-box:hover {
+    background: rgba(255, 255, 255, 0.3); /* Meningkatkan transparansi */
+    backdrop-filter: blur(10px); /* Blur background untuk glassmorphism */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Sedikit memperbesar */
+}
+
+/* Style untuk Halaman Promo */
+.promo-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.promo-item {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    color: #333;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(0px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.promo-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Gaya Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+/* Gaya untuk Logo di Navigasi */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a.logo {
+    display: flex;
+    align-items: center;
+}
+
+nav a.logo img {
+    height: 40px; /* Atur ukuran logo */
+    width: auto;
+    margin-right: 10px;
+}
